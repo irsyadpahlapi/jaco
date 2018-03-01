@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .contentkiri{
+      background-color: rgba(0,0,200,0.1);
+      width:40%;
+      float:left;
+      padding:10px;
+      margin-top:80px;
+      margin-left:20px;
+      border-radius: 10px;
+    }
+
+    .contentkanan{
+      background-color: rgba(0,0,200,0.1);
+      width : 40%;
+      float :right;
+      padding:10px;
+      margin-top:80px;
+      margin-right:20px;
+      border-radius: 10px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <table border='1'>
+      <tr>
+        <th>no</th>
+        <th>user id</th>
+        <th>laporan id</th>
+        <th>status</th>
+        <th colspan='2'>action</th>
+      </tr>
+      <% for(let i=0;i<data.length;i++){%>
+        <tr>
+          <td> <%= i+1 %> </td>
+          <td><%= data[i].UserId %></td>
+          <td><%= data[i].LaporanId %></td>
+          <td><%= data[i].status %></td>
+          <td><a href="/user/update/<%= data[i].id %>">update</a> </td>
+          <td> <a href="/user/delete/<%= data[i].id %>">delete</a> </td>
+        </tr>
+      <%}%>
+    </table>
+  </body>
+</html>
