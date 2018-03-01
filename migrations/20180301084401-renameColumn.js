@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.renameColumn('Laporans',
       'wilayahId','WilayahId'
-    
+
     );
     /*
       Add altering commands here.

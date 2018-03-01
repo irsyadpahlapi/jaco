@@ -78,8 +78,7 @@
             <th>no</th>
             <th>username</th>
             <th>password</th>
-            <th>first name</th>
-            <th>last name</th>
+            <th>name</th>
             <th>address</th>
             <th>status</th>
             <th colspan='2'>action</th>
@@ -89,8 +88,8 @@
               <td> <%= i+1 %> </td>
               <td><%= data[i].username %></td>
               <td><%= data[i].password %></td>
-              <td><%= data[i].first_name %></td>
-              <td><%= data[i].last_name %></td>
+              <% var gabkat=new my_helper.gabungkata(data[i].first_name,data[i].last_name) %>
+              <td><%= gabkat.joinKata() %></td>
               <td><%= data[i].address %></td>
               <td><%= data[i].status %></td>
               <td><a href="/user/update/<%= data[i].id %>">update</a> </td>
