@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Wilayah.associate = function(models) {
     // associations can be defined here
-    Wilayah.hasMany(models.Laporan);
   };
   return Wilayah;
 };
