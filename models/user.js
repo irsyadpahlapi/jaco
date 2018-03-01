@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.belongsToMany(models.Laporan,{through:models.Like,foreignKey:'UserId'})
+    User.hasMany(models.Like,{foreignKey:'UserId'})
   };
   return User;
 };

@@ -38,11 +38,11 @@
       <% for(let i=0;i<data.length;i++){%>
         <tr>
           <td> <%= i+1 %> </td>
-          <td><%= data[i].UserId %></td>
-          <td><%= data[i].LaporanId %></td>
+          <td><%= data[i].User.first_name %></td>
+          <td><%= data[i].Laporan.deskripsi %></td>
           <td><%= data[i].status %></td>
-          <td><a href="/user/update/<%= data[i].id %>">update</a> </td>
-          <td> <a href="/user/delete/<%= data[i].id %>">delete</a> </td>
+          <td><a href="/like/update/<%= data[i].id %>">update</a> </td>
+          <td> <a href="/like/delete/<%= data[i].id %>">delete</a> </td>
         </tr>
       <%}%>
     </table>
