@@ -21,13 +21,9 @@
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-<<<<<<< HEAD
-    "express-session": "^1.15.6",
-=======
     "express-fileupload": "^0.4.0",
     "express-session": "^1.15.6",
     "fileupload": "^1.0.0",
->>>>>>> a5d6e811e0d5ff68e31c3f09eb143bf2d4d3b6b5
     "pg": "^7.4.1",
     "sequelize": "^4.35.0"
   }

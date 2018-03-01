@@ -9,7 +9,7 @@ const bodyparser=require('body-parser')
 const index=require('./routes/index')
 const wilayahs=require('./routes/wilayahs')
 const laporans=require('./routes/laporans')
-<<<<<<< HEAD
+
 const login=require('./routes/login')
 
 app.use(session({
@@ -18,10 +18,10 @@ app.use(session({
   saveUninitialized: true,
   cookie: {}
 }))
-=======
+
 const registers=require('./routes/registers')
 const fileUpload = require('express-fileupload')
->>>>>>> a5d6e811e0d5ff68e31c3f09eb143bf2d4d3b6b5
+
 app.set('view engine','ejs')
 app.locals.my_helper = require('./helpers');
 
