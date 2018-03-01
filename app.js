@@ -9,6 +9,7 @@ const bodyparser=require('body-parser')
 const index=require('./routes/index')
 const wilayahs=require('./routes/wilayahs')
 const laporans=require('./routes/laporans')
+const homepage=require('./routes/homepage')
 
 const login=require('./routes/login')
 
@@ -36,12 +37,12 @@ app.use(fileUpload());
 app.use('/user',user)
 app.use('/like',like)
 app.use('/login',login)
-
+app.use('/',homepage)
 app.get('/',ceklogin,(req,res)=>{
-  res.send('halaman homepage')
+  res.render('homepage')
 })
 app.get('/admin',ceklogin,(req,res)=>{
-  res.send('halaman admin')
+  res.render('homeadmin')
 })
 
 

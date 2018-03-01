@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/pilihan" method="post">
+      <table border='1'>
+        <tr>
+          <th></th>
+          <th>foto</th>
+          <th>lokasi</th>
+          <th>deskripsi</th>
+          <th colspan="2">pilihan</th>
+        </tr>
+        <% for(let i=0;i<data.length;i++){%>
+          <tr>
+            <td> <input type="hidden" name="id" value="<%=data[i].id%>"> </td>
+            <td> <img src="/<%=data[i].foto%>" alt="" style="width:100px;height:100px;margin:10px"> </td>
+            <td> <%= data[i].lokasi %></td>
+            <td> <%= data[i].deskripsi %></td>
+            <td> <input type="submit" name="hoax" value="hoax">  <input type="submit" name="valid" value="valid"> </td>
+          </tr>
+        <%}%>
+      </table>
+    </form>
+
+  </body>
+</html>

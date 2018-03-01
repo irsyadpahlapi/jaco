@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   var Like = sequelize.define('Like', {
     id : {type:DataTypes.INTEGER,allowNull: false,autoIncrement: true,primaryKey:true},
     UserId: DataTypes.INTEGER,
-    LaporanId: DataTypes.STRING,
+    LaporanId: DataTypes.INTEGER,
     status: DataTypes.INTEGER
   }, {});
   Like.associate = function(models) {
