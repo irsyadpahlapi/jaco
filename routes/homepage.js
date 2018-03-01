@@ -1,7 +1,8 @@
 const routerlogin=require('express').Router();
 const models = require('../models');
+const ceklogin=require('../helper/ceklogin.js')
 
-routerlogin.get('/',(req,res)=>{
+routerlogin.get('/',ceklogin,(req,res)=>{
   models.Wilayah.findAll().then(datas =>{
     res.render('homepage',{data:datas})
   })

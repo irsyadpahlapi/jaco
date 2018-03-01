@@ -38,9 +38,8 @@ app.use('/user',user)
 app.use('/like',like)
 app.use('/login',login)
 app.use('/',homepage)
-app.get('/',ceklogin,(req,res)=>{
-  res.render('homepage')
-})
+
+
 app.get('/admin',ceklogin,(req,res)=>{
   res.render('homeadmin')
 })
