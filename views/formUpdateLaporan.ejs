@@ -1,0 +1,42 @@
+<body>
+
+    <h1>Update Laporan</h1>
+
+    <form name="form" method="POST" action="/laporans/update/<%= data.id %>">
+    <table>
+        <tr>
+        <td>Foto</td>
+        <td><input type="text" name="foto" value="<%= data.foto %>" required></td>
+        </tr>
+        <tr>
+        <td>Deskripsi</td>
+        <td><input type="text" name="deskripsi" value="<%= data.deskripsi %>" required></td>
+        </tr>
+
+        <tr>
+        <td>Wilayah</td>
+        <td>
+
+            <select name="WilayahId">
+              <option value=""></option>
+              <% data_wilayah.forEach(data_wilayah=>{ %>
+              <option value="<%= data_wilayah.id %>" <% if (data_wilayah.id===data.WilayahId){%>
+                selected
+              <% }%> ><%= data_wilayah.nama %></option>
+                <% }) %>
+            </select>
+        </td>
+        </tr>
+
+        <tr>
+        <td>Lokasi Detail</td>
+        <td><input type="text" name="lokasi" value="<%= data.lokasi %>" required></td>
+        </tr>
+
+        <tr>
+        <td>  <input type="submit" value="submit"></td>
+        </tr>
+
+    </table>
+    </form>
+</body>

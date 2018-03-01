@@ -1,0 +1,40 @@
+<body>
+
+    <h1>Add Laporan</h1>
+
+    <form name="form" method="POST" action="/laporans/add" enctype="multipart/form-data">
+    <table>
+        <tr>
+        <td>Foto</td>
+        <td><input type="file" name="foto" required></td>
+        </tr>
+        <tr>
+        <td>Deskripsi</td>
+        <td><input type="text" name="deskripsi" required></td>
+        </tr>
+
+        <tr>
+        <td>Wilayah</td>
+        <td>
+
+            <select name="WilayahId">
+              <option value=""></option>
+              <% data.forEach(data=>{ %>
+              <option value="<%= data.id %>"><%= data.nama %></option>
+                <% }) %>
+            </select>
+        </td>
+        </tr>
+
+        <tr>
+        <td>Lokasi Detail</td>
+        <td><input type="text" name="lokasi" required></td>
+        </tr>
+
+        <tr>
+        <td>  <input type="submit" value="submit"></td>
+        </tr>
+
+    </table>
+    </form>
+</body>
