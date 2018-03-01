@@ -1,0 +1,33 @@
+<body>
+
+    <h1>Register</h1>
+    <p style="color"><%= data.error %></p>
+    <form name="form" method="POST" action="/registers">
+    <table>
+        <tr>
+        <td>Username</td>
+        <td><input type="text" name="username" required></td>
+        </tr>
+        <tr>
+        <td>Password</td>
+        <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+        <td>First Name</td>
+        <td><input type="text" name="first_name" required></td>
+        </tr>
+        <tr>
+        <td>Last Name</td>
+        <td><input type="text" name="last_name" required></td>
+        </tr>
+        <tr>
+        <td>Address</td>
+        <td><input type="text" name="address" required></td>
+        </tr>
+        <tr>
+        <td>  <input type="submit" value="submit"></td>
+        </tr>
+
+    </table>
+    </form>
+</body>
