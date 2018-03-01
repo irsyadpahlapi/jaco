@@ -2,11 +2,11 @@
 
     <h1>Add Laporan</h1>
 
-    <form name="form" method="POST" action="/laporans/add">
+    <form name="form" method="POST" action="/laporans/add" enctype="multipart/form-data">
     <table>
         <tr>
         <td>Foto</td>
-        <td><input type="text" name="foto" required></td>
+        <td><input type="file" name="foto" required></td>
         </tr>
         <tr>
         <td>Deskripsi</td>
