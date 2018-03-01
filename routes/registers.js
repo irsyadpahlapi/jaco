@@ -1,7 +1,6 @@
 'use strict';
 const models = require('../models');
 module.exports = (function() {
-  // app.set('view engine', 'ejs')
 const routes = require('express').Router();
 
 routes.get('/', function (req, res) {

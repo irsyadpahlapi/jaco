@@ -23,7 +23,6 @@ routeruser.get('/update/:id',(req,res)=>{
 
 routeruser.post('/update/:id',(req,res)=>{
   models.User.update({
-    username:req.body.username,
     password:req.body.password,
     first_name:req.body.first_name,
     last_name:req.body.last_name,
