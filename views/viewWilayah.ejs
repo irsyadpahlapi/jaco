@@ -1,0 +1,23 @@
+<body>
+
+    <h1>List Wilayah</h1>
+    <a href="/wilayahs/add">Add</a>
+    <table border='1'>
+        <tr>
+          <td><center>Id.</center></td>
+          <td><center>Nama Wilayah</center></td>
+          <td colspan=2><center>Options</center></td>
+        </tr>
+      <% let i=1 %>
+      <% data.forEach(data =>{ %>
+        <tr>
+          <td><%= i++ %></td>
+            <td><%= data.nama %></td>
+          <td><a href="/wilayahs/update/<%= data.id %>">Update</a></td>
+          <td><a href="/wilayahs/delete/<%= data.id %>" onclick="return confirm('delete this ?');">Delete</a></td>
+        </tr>
+      <% })%>
+    </table>
+
+    <a href="/">Back</a>
+</body>
